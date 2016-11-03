@@ -122,3 +122,42 @@ sc.set_x(20)
 ## Héritage vs Composition
         
     
+> Une classe avec qui on n'aura pas de relation d'héritage
+
+    class Tige(object):
+        def implicite(self):
+            print 'Tige.implicite'
+        def redefinie(self):
+            print 'Tige.redefinie'
+        def modifiee(self):
+            print 'Tige.modifiee'
+    
+
+> on n'hérite pas
+> mais on fait ce qu'on appelle un composition
+> avec la classe Tige
+
+    class Rose(object):
+        # mais pour chaque objet de la classe Rose
+        # on va créer un objet de la classe Tige
+        # et le conserver dans un champ
+        def __init__(self):
+            self.externe = Tige()
+        # le reste est presque comme tout à l'heure
+        # sauf qu'il faut definir implicite
+        def implicite(self):
+            self.externe.implicite()        
+        # on redefinit complement redefinie
+        def redefinie(self):
+            print 'Rose.redefinie'        
+        def modifiee(self):
+            self.externe.modifiee()
+            print 'Rose.modifiee apres Tige'
+
+
+> on obtient ici exactement le même comportement pour les trois sortes de méthodes
+
+    fille = Rose()
+    fille.implicite()
+    fille.redefinie()
+    fille.modifiee()
