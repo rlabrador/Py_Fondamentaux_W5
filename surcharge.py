@@ -13,7 +13,7 @@ I.get_x()
 ## exception(, *args, **kwargs) : I.get_x()
 #AttributeError: C instance has no attribute 'x'
 
-#Il faut définir un constructeur avec un type buit-in __init__(
+#Il faut définir un constructeur avec un type buit-in __init__
 
  
 
