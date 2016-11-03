@@ -112,6 +112,7 @@ class Tige(object):
     def modifiee(self):
         print 'Tige.modifiee'
 
+
 # on n'hérite pas
 # mais on fait ce qu'on appelle un composition
 # avec la classe Tige
@@ -121,16 +122,21 @@ class Rose(object):
     # et le conserver dans un champ
     def __init__(self):
         self.externe = Tige()
-
     # le reste est presque comme tout à l'heure
     # sauf qu'il faut definir implicite
     def implicite(self):
-        self.externe.implicite()
-        
+        self.externe.implicite()        
     # on redefinit complement redefinie
     def redefinie(self):
-        print 'Rose.redefinie'
-        
+        print 'Rose.redefinie'        
     def modifiee(self):
         self.externe.modifiee()
-        print 'Rose.modifiee apres Tige'       
+        print 'Rose.modifiee apres Tige'
+
+
+# on obtient ici exactement le même comportement pour les trois sortes de méthodes
+fille = Rose()
+
+fille.implicite()
+fille.redefinie()
+fille.modifiee()

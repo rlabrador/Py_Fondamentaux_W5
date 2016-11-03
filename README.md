@@ -7,7 +7,7 @@
 #### https://www.fun-mooc.fr/courses/inria/41001S03/session03/b775f7eacc4c4054865be4b84be77ab6/
 
 
-## Voyons d'abord l'héritage
+## Voyons ici d'abord l'héritage
     class C1:
         pass
     
@@ -54,7 +54,7 @@ c.set_x(10)
 sc.set_x(20)
 
 
-> Vérifions les espaces de nommage (dict)
+> Vérifions les espaces de nommage (dict) qui est l'attribut built-in __dict__
 
     c.__dict__
 
@@ -119,7 +119,7 @@ sc.set_x(20)
 > Rose.modifiee apres Fleur   
 
 
-## Héritage vs Composition
+## Puis une notion de Composition vs Héritage 
         
     
 > Une classe avec qui on n'aura pas de relation d'héritage
